@@ -1,27 +1,43 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect} from "react";
+import { useSelector } from "react-redux";
+import { useThunk } from "../hooks/use-thunk";
 import { fetchUsers, addUser } from "../store";
 import Button from './Button';
 import Skeleton from "./Skeleton";
 
 function UsersList() {
-    const dispatch = useDispatch();
-    const { data, isLoading, error } = useSelector((state) => {
+
+    const [doFetchUsers, isLoadingUsers, loadingUsersError] = useThunk(fetchUsers);
+    const [doCreateUser, isCreatingUser, creatingUserError] = useThunk(addUser);
+
+    // const { data, isLoading, error } = useSelector((state) => {
+    //     return state.users;
+    // })
+
+    const { data } = useSelector((state) => {
         return state.users;
-    })
+    })    
 
     useEffect(()=> {
-        console.log(dispatch(fetchUsers()));
-    }, [dispatch]);
+        doFetchUsers();
+    }, [doFetchUsers]);
 
     const handleUserAdd = () => {
-        dispatch(addUser());
+        doCreateUser();
     }
 
-    if (isLoading) {
+    // if (isLoading) {
+    //     return <Skeleton className="h-10 w-full" times={6}/>
+    // }
+    // if (error) {
+    //     return <div>Error Fetching Data...</div>
+    // }
+
+    if (isLoadingUsers) {
         return <Skeleton className="h-10 w-full" times={6}/>
     }
-    if (error) {
+    if (loadingUsersError) {
+        console.log('loadingUsersError', loadingUsersError);
         return <div>Error Fetching Data...</div>
     }
 
@@ -36,9 +52,14 @@ function UsersList() {
     return <div>
         <div className="flex flex-row justify-between m-3">
             <h1 className="m-2 text-xl">Users</h1>
-            <Button onClick={handleUserAdd}>
+
+            {
+                isCreatingUser ? 'Creating User...' :
+                <Button onClick={handleUserAdd}>
                 + Add User
-            </Button>
+                </Button>
+            }
+            {creatingUserError && 'Error Creating User'}
         </div>
         {renderedUsers}
     </div>
