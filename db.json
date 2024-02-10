@@ -1,5 +1,66 @@
 {
-    "users": [],
-    "albums": [],
-    "photos": []
+  "users": [
+    {
+      "id": 1,
+      "name": "Myra"
+    },
+    {
+      "id": "79e4",
+      "name": "Maxine Stoltenberg"
+    },
+    {
+      "id": "052e",
+      "name": "Celia D'Amore"
+    },
+    {
+      "id": "84a6",
+      "name": "Abel Ruecker"
+    },
+    {
+      "id": "b479",
+      "name": "Spencer Schaefer"
+    },
+    {
+      "id": "dda5",
+      "name": "Frankie Hoeger"
+    },
+    {
+      "id": "a419",
+      "name": "Ms. Malcolm Gottlieb"
+    },
+    {
+      "id": "084c",
+      "name": "Dianne Harber"
+    },
+    {
+      "id": "9ce2",
+      "name": "Mr. Cindy Schaefer"
+    },
+    {
+      "id": "6570",
+      "name": "Misty Schiller"
+    },
+    {
+      "id": "0328",
+      "name": "Abel Beatty"
+    },
+    {
+      "id": "4291",
+      "name": "Nathan Stroman"
+    },
+    {
+      "id": "13bf",
+      "name": "Casey Gutkowski"
+    },
+    {
+      "id": "5d63",
+      "name": "Estelle Koss"
+    },
+    {
+      "id": "e392",
+      "name": "Miss Kristin O'Kon"
+    }
+  ],
+  "albums": [],
+  "photos": []
 }
