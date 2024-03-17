@@ -1,38 +1,52 @@
 {
   "users": [
     {
-      "id": "4a13",
-      "name": "Nadine Hyatt"
-    },
-    {
-      "id": "efde",
-      "name": "Lora Stokes"
-    },
-    {
-      "id": "fb6c",
-      "name": "Sheldon Ritchie"
-    },
-    {
-      "id": "a945",
-      "name": "Rodney Corkery"
-    },
-    {
-      "id": "95c3",
-      "name": "Roosevelt Leffler DDS"
-    },
-    {
-      "id": "4c4e",
-      "name": "Roy Kuphal"
-    },
-    {
-      "id": "3e44",
-      "name": "Jackie Langosh MD"
-    },
-    {
-      "id": "9e1f",
-      "name": "Laurie Cruickshank"
+      "id": "1",
+      "name": "Myra"
     }
   ],
-  "albums": [],
-  "photos": []
+  "albums": [
+    {
+      "id": "10",
+      "userId": 1,
+      "title": "Album 1"
+    },
+    {
+      "id": "1aa7",
+      "title": "Fantastic Cotton Car",
+      "userId": 1
+    }
+  ],
+  "photos": [
+    {
+      "id": "e9c1",
+      "albumId": "10",
+      "url": "https://loremflickr.com/150/150/abstract?lock=15567"
+    },
+    {
+      "id": "57b2",
+      "albumId": "1aa7",
+      "url": "https://loremflickr.com/150/150/abstract?lock=32591"
+    },
+    {
+      "id": "0934",
+      "albumId": "1aa7",
+      "url": "https://loremflickr.com/150/150/abstract?lock=72079"
+    },
+    {
+      "id": "58dd",
+      "albumId": "10",
+      "url": "https://loremflickr.com/150/150/abstract?lock=31459"
+    },
+    {
+      "id": "59ed",
+      "albumId": "1aa7",
+      "url": "https://loremflickr.com/150/150/abstract?lock=43168"
+    },
+    {
+      "id": "bb3c",
+      "albumId": "10",
+      "url": "https://loremflickr.com/150/150/abstract?lock=37402"
+    }
+  ]
 }
